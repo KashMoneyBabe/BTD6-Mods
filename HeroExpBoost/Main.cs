@@ -21,7 +21,7 @@ namespace HeroExpBoost
                         foreach (var upgrade in tower.upgrades)
                         {
                             var actualUpgrade = gameModel.GetUpgrade(upgrade.upgrade.ToString());
-                            actualUpgrade.xpCost = (actualUpgrade.xpCost * 50 / 100); // 2x faster hero leveling for all heroes
+                            actualUpgrade.xpCost = (actualUpgrade.xpCost * 40 / 100); // 2.5x faster hero leveling for all heroes
                         }
                     }
                 }
