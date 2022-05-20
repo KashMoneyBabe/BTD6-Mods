@@ -84,11 +84,12 @@ namespace BetterUpgrades
             }
 
             // Armor Piercing Darts hits all
-            foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.MonkeySub)
-                .Where(model => model.appliedUpgrades.Contains("Armor Piercing Darts")))
+            foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.MonkeySub))
             {
-                var damageModel = towerModel.GetWeapon().projectile.GetDamageModel();
-                damageModel.immuneBloonProperties = BloonProperties.None;
+                if (towerModel.appliedUpgrades.Contains("Armor Piercing Darts"))
+                {
+                    towerModel.GetWeapon().projectile.GetDamageModel().immuneBloonProperties = BloonProperties.None;
+                }
             }
         }
     }
