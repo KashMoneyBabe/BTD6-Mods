@@ -56,6 +56,26 @@ namespace BetterUpgrades
                 }
             }
 
+            // Superstorm increased range and see through walls
+            foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.Druid))
+            {
+                if (towerModel.appliedUpgrades.Contains("Superstorm"))
+                {
+                    towerModel.range += 12;
+                    towerModel.ignoreBlockers = true;
+
+                    foreach (var attackModel in towerModel.GetAttackModels())
+                    {
+                        attackModel.range += 12;
+                        attackModel.attackThroughWalls = true;
+                        foreach (var weapon in attackModel.weapons)
+                        {
+                            weapon.projectile.ignoreBlockers = true;
+                        }
+                    }
+                }
+            }
+
             // Night Vision Goggles see through walls
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.SniperMonkey))
             {
