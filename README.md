@@ -9,6 +9,8 @@ Berserker Brew, Stronger Stimulant, Permanent Brew, Overclock and Ultraboost 75%
 
 Ultravision: slightly more range and can shoot through obstacles (without MK)
 
+Superstorm: more range and can shoot through obstacles
+
 Night Vision Goggles: can shoot through obstacles
 
 Laser Cannon: can pop lead
