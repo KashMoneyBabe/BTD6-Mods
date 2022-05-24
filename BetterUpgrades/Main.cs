@@ -2,6 +2,7 @@
 using Assets.Scripts.Models;
 using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Models.Towers.Mods;
+using Assets.Scripts.Models.Towers.Projectiles;
 using BTD_Mod_Helper;
 using BTD_Mod_Helper.Extensions;
 using Il2CppSystem.Collections.Generic;
@@ -75,6 +76,14 @@ namespace BetterUpgrades
                         foreach (var weapon in attackModel.weapons)
                         {
                             weapon.projectile.ignoreBlockers = true;
+                        }
+                    }
+
+                    foreach (var proj in towerModel.GetDescendants<ProjectileModel>().ToList())
+                    {
+                        if(proj.display == "2a1d60690a632f543b80280219205247")
+                        {
+                            proj.pierce += 80000f;
                         }
                     }
                 }
