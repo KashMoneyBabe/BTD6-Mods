@@ -37,9 +37,9 @@ namespace BetterUpgrades
             var ultraboost = gameModel.GetUpgrade("Ultraboost");
             ultraboost.cost = (ultraboost.cost * 25 / 100) - ((ultraboost.cost * 25 / 100) % 5);
 
-            // Superstorm 50% discount
+            // Superstorm 25% discount
             var superstorm = gameModel.GetUpgrade("Superstorm");
-            superstorm.cost = (superstorm.cost * 50 / 100) - ((superstorm.cost * 50 / 100) % 5);
+            superstorm.cost = (superstorm.cost * 75 / 100) - ((superstorm.cost * 75 / 100) % 5);
 
             // Ultravision increased range and see through walls
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.SuperMonkey))
