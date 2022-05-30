@@ -23,7 +23,7 @@ Gives a 30% discount to all Tier 5 upgrades, plus 10% discount to all other upgr
 
 
 # HeroExpBoost:
-Heroes level up ~2.86x faster
+Heroes level up 2x faster
 
 
 # HeroExpScaling:
