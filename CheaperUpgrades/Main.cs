@@ -22,7 +22,7 @@ namespace CheaperUpgrades
             {
                 if (upgradeModel.tier == 4)
                 {
-                    upgradeModel.cost = (upgradeModel.cost * 70 / 100) - (upgradeModel.cost * 60 / 100) % 5;
+                    upgradeModel.cost = (upgradeModel.cost * 70 / 100) - (upgradeModel.cost * 70 / 100) % 5;
                 }
                 if (upgradeModel.tier == 3)
                 {
