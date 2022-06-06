@@ -31,7 +31,7 @@ Scales down XPcost for heroes so they all level up at the 1x rate
 
 
 # PlaceAnywhere:
-Can place towers almost anywhere
+Can place towers almost anywhere. Includes BTD Mod Helper option to toggle on/off.
 
 
 # SupportiveHeroes:
