@@ -60,26 +60,26 @@ namespace BetterHeroes
                     {
                         foreach (var weapon in attackModel.weapons)
                         {
-                            weapon.rate *= 0.8f;
-                            if (weapon.projectile.HasBehavior<PsiEffectModel>())
-                            {
-                                weapon.projectile.GetBehavior<PsiEffectModel>().damagePerTick *= 2;
-                            }
-                            if (weapon.projectile.HasBehavior<PsiBloonBehaviorModel>())
-                            {
-                                weapon.projectile.GetBehavior<PsiBloonBehaviorModel>().damagePerTick *= 2;
-                            }
-                            if (weapon.projectile.HasBehavior<CreateProjectileOnContactModel>())
-                            {
-                                if (weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.HasBehavior<PsiEffectModel>())
-                                {
-                                    weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetBehavior<PsiEffectModel>().damagePerTick *= 2;
-                                }
-                                if (weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.HasBehavior<PsiBloonBehaviorModel>())
-                                {
-                                    weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetBehavior<PsiBloonBehaviorModel>().damagePerTick *= 2;
-                                }
-                            }
+                            weapon.rate *= 0.5f;
+                            //if (weapon.projectile.HasBehavior<PsiEffectModel>())
+                            //{
+                            //    weapon.projectile.GetBehavior<PsiEffectModel>().damagePerTick *= 2;
+                            //}
+                            //if (weapon.projectile.HasBehavior<PsiBloonBehaviorModel>())
+                            //{
+                            //    weapon.projectile.GetBehavior<PsiBloonBehaviorModel>().damagePerTick *= 2;
+                            //}
+                            //if (weapon.projectile.HasBehavior<CreateProjectileOnContactModel>())
+                            //{
+                            //    if (weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.HasBehavior<PsiEffectModel>())
+                            //    {
+                            //        weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetBehavior<PsiEffectModel>().damagePerTick *= 2;
+                            //    }
+                            //    if (weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.HasBehavior<PsiBloonBehaviorModel>())
+                            //    {
+                            //        weapon.projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetBehavior<PsiBloonBehaviorModel>().damagePerTick *= 2;
+                            //    }
+                            //}
                         }
                     }
                 }
