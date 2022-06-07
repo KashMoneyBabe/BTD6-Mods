@@ -60,7 +60,7 @@ namespace BetterHeroes
                     {
                         foreach (var weapon in attackModel.weapons)
                         {
-                            weapon.rate *= 0.5f;
+                            weapon.rate *= 0.667f;
                             //if (weapon.projectile.HasBehavior<PsiEffectModel>())
                             //{
                             //    weapon.projectile.GetBehavior<PsiEffectModel>().damagePerTick *= 2;
