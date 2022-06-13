@@ -41,6 +41,14 @@ namespace BetterUpgrades
             var superstorm = gameModel.GetUpgrade("Superstorm");
             superstorm.cost = (superstorm.cost * 75 / 100) - ((superstorm.cost * 75 / 100) % 5);
 
+
+            // Sniper damage increased
+            foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.SniperMonkey))
+            {
+                var damageModel = towerModel.GetWeapon().projectile.GetDamageModel();
+                damageModel.damage += (towerModel.appliedUpgrades.Count + 1);
+            }
+
             // Ultravision increased range and see through walls
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.SuperMonkey))
             {
@@ -81,7 +89,7 @@ namespace BetterUpgrades
 
                     foreach (var proj in towerModel.GetDescendants<ProjectileModel>().ToList())
                     {
-                        if(proj.display == "2a1d60690a632f543b80280219205247")
+                        if (proj.display == "2a1d60690a632f543b80280219205247")
                         {
                             proj.pierce += 80000f;
                         }
