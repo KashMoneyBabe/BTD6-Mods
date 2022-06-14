@@ -1,6 +1,9 @@
 ﻿using Assets.Scripts.Models;
+using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Models.Towers.Mods;
+using Assets.Scripts.Models.Towers.Behaviors;
 using BTD_Mod_Helper;
+using BTD_Mod_Helper.Extensions;
 using BTD_Mod_Helper.Api.ModOptions;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
@@ -17,13 +20,38 @@ namespace PlaceAnywhere
         {
             if (enabled)
             {
+                // make sure dart monkey's footprint is modded before any RectangleFootprint monkey
+                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().radius = 0f;
+                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().ignoresPlacementCheck = true;
+                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().ignoresTowerOverlap = true;
+                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().doesntBlockTowerPlacement = true;
+
+                foreach (var area in gameModel.map.areas)
+                {
+                    area.isBlocker = false;
+                    area.isDisabled = false;
+                }
+
                 foreach (var towerModel in gameModel.towers)
                 {
                     towerModel.radius = 0;
                     towerModel.radiusSquared = 0;
+                    towerModel.ignoreBlockers = true;
+
+                    if (towerModel.HasBehavior<CircleFootprintModel>())
+                    {
+                        towerModel.GetBehavior<CircleFootprintModel>().radius = 0f;
+                        towerModel.GetBehavior<CircleFootprintModel>().ignoresPlacementCheck = true;
+                        towerModel.GetBehavior<CircleFootprintModel>().ignoresTowerOverlap = true;
+                        towerModel.GetBehavior<CircleFootprintModel>().doesntBlockTowerPlacement = true;
+                    }
+
+                    if (towerModel.HasBehavior<RectangleFootprintModel>())
+                    {
+                        towerModel.footprint = gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).footprint.Duplicate();
+                    }
 
                     towerModel.areaTypes = new UnhollowerBaseLib.Il2CppStructArray<Assets.Scripts.Models.Map.AreaType>(5);
-
                     towerModel.areaTypes[0] = Assets.Scripts.Models.Map.AreaType.ice;
                     towerModel.areaTypes[1] = Assets.Scripts.Models.Map.AreaType.land;
                     towerModel.areaTypes[2] = Assets.Scripts.Models.Map.AreaType.water;
@@ -37,9 +65,22 @@ namespace PlaceAnywhere
                     {
                         power.tower.radius = 0;
                         power.tower.radiusSquared = 0;
+                        power.tower.ignoreBlockers = true;
+
+                        if (power.tower.HasBehavior<CircleFootprintModel>())
+                        {
+                            power.tower.GetBehavior<CircleFootprintModel>().radius = 0f;
+                            power.tower.GetBehavior<CircleFootprintModel>().ignoresPlacementCheck = true;
+                            power.tower.GetBehavior<CircleFootprintModel>().ignoresTowerOverlap = true;
+                            power.tower.GetBehavior<CircleFootprintModel>().doesntBlockTowerPlacement = true;
+                        }
+
+                        if (power.tower.HasBehavior<RectangleFootprintModel>())
+                        {
+                            power.tower.footprint = gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).footprint.Duplicate();
+                        }
 
                         power.tower.areaTypes = new UnhollowerBaseLib.Il2CppStructArray<Assets.Scripts.Models.Map.AreaType>(5);
-
                         power.tower.areaTypes[0] = Assets.Scripts.Models.Map.AreaType.ice;
                         power.tower.areaTypes[1] = Assets.Scripts.Models.Map.AreaType.land;
                         power.tower.areaTypes[2] = Assets.Scripts.Models.Map.AreaType.water;
