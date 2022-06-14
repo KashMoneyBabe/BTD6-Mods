@@ -20,16 +20,17 @@ namespace PlaceAnywhere
         {
             if (enabled)
             {
-                // make sure dart monkey's footprint is modded before any RectangleFootprint monkey
-                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().radius = 0f;
-                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().ignoresPlacementCheck = true;
-                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().ignoresTowerOverlap = true;
-                gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).GetBehavior<CircleFootprintModel>().doesntBlockTowerPlacement = true;
-
+                // Areas
                 foreach (var area in gameModel.map.areas)
                 {
                     area.isBlocker = false;
                     area.isDisabled = false;
+                }
+
+                // Towers
+                foreach (var towerModel in gameModel.towers)
+                {
+                    if (towerModel.HasBehavior<RectangleFootprintModel>()) towerModel.footprint = gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).footprint.Duplicate();
                 }
 
                 foreach (var towerModel in gameModel.towers)
@@ -38,17 +39,13 @@ namespace PlaceAnywhere
                     towerModel.radiusSquared = 0;
                     towerModel.ignoreBlockers = true;
 
+                    towerModel.footprint.ignoresPlacementCheck = true;
+                    towerModel.footprint.ignoresTowerOverlap = true;
+                    towerModel.footprint.doesntBlockTowerPlacement = true;
+
                     if (towerModel.HasBehavior<CircleFootprintModel>())
                     {
                         towerModel.GetBehavior<CircleFootprintModel>().radius = 0f;
-                        towerModel.GetBehavior<CircleFootprintModel>().ignoresPlacementCheck = true;
-                        towerModel.GetBehavior<CircleFootprintModel>().ignoresTowerOverlap = true;
-                        towerModel.GetBehavior<CircleFootprintModel>().doesntBlockTowerPlacement = true;
-                    }
-
-                    if (towerModel.HasBehavior<RectangleFootprintModel>())
-                    {
-                        towerModel.footprint = gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).footprint.Duplicate();
                     }
 
                     towerModel.areaTypes = new UnhollowerBaseLib.Il2CppStructArray<Assets.Scripts.Models.Map.AreaType>(5);
@@ -59,6 +56,15 @@ namespace PlaceAnywhere
                     towerModel.areaTypes[4] = Assets.Scripts.Models.Map.AreaType.unplaceable;
                 }
 
+                // Powers
+                foreach (var power in gameModel.powers)
+                {
+                    if (power != null && power.tower != null)
+                    {
+                        if (power.tower.HasBehavior<RectangleFootprintModel>()) power.tower.footprint = gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).footprint.Duplicate();
+                    }
+                }
+
                 foreach (var power in gameModel.powers)
                 {
                     if (power != null && power.tower != null)
@@ -67,17 +73,14 @@ namespace PlaceAnywhere
                         power.tower.radiusSquared = 0;
                         power.tower.ignoreBlockers = true;
 
+                        power.tower.footprint.ignoresPlacementCheck = true;
+                        power.tower.footprint.ignoresTowerOverlap = true;
+                        power.tower.footprint.doesntBlockTowerPlacement = true;
+
+
                         if (power.tower.HasBehavior<CircleFootprintModel>())
                         {
                             power.tower.GetBehavior<CircleFootprintModel>().radius = 0f;
-                            power.tower.GetBehavior<CircleFootprintModel>().ignoresPlacementCheck = true;
-                            power.tower.GetBehavior<CircleFootprintModel>().ignoresTowerOverlap = true;
-                            power.tower.GetBehavior<CircleFootprintModel>().doesntBlockTowerPlacement = true;
-                        }
-
-                        if (power.tower.HasBehavior<RectangleFootprintModel>())
-                        {
-                            power.tower.footprint = gameModel.GetTower(TowerType.DartMonkey, 0, 0, 0).footprint.Duplicate();
                         }
 
                         power.tower.areaTypes = new UnhollowerBaseLib.Il2CppStructArray<Assets.Scripts.Models.Map.AreaType>(5);
