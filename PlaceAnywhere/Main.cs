@@ -23,7 +23,6 @@ namespace PlaceAnywhere
                 // Areas
                 foreach (var area in gameModel.map.areas)
                 {
-                    area.isBlocker = false;
                     area.isDisabled = false;
                 }
 
@@ -37,7 +36,6 @@ namespace PlaceAnywhere
                 {
                     towerModel.radius = 0;
                     towerModel.radiusSquared = 0;
-                    towerModel.ignoreBlockers = true;
 
                     towerModel.footprint.ignoresPlacementCheck = true;
                     towerModel.footprint.ignoresTowerOverlap = true;
@@ -71,7 +69,6 @@ namespace PlaceAnywhere
                     {
                         power.tower.radius = 0;
                         power.tower.radiusSquared = 0;
-                        power.tower.ignoreBlockers = true;
 
                         power.tower.footprint.ignoresPlacementCheck = true;
                         power.tower.footprint.ignoresTowerOverlap = true;
