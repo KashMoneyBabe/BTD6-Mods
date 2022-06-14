@@ -128,7 +128,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Place Anywhere</h2>
         </td>
 		<td>
-		Can place towers ~~almost~~ anywhere. Includes BTD Mod Helper option to toggle on/off.
+		Can place towers anywhere. Includes BTD Mod Helper option to toggle on/off.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/PlaceAnywhere.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
