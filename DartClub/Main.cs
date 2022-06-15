@@ -22,9 +22,9 @@ namespace DartClub
         {
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.DartMonkey))
             {
-                float income = towerModel.appliedUpgrades.Count * 25f;
-                if (towerModel.tier == 5) income += 500f;
-                if (towerModel.tier == 0) income += 15f;
+                float income = towerModel.appliedUpgrades.Count * 16f;
+                if (towerModel.tier == 5) income += 600f;
+                if (towerModel.tier == 0) income += 10f;
 
                 var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId + towerModel.tiers[0] + towerModel.tiers[1] + towerModel.tiers[2], income, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
                 towerModel.AddBehavior(cashGeneration);
