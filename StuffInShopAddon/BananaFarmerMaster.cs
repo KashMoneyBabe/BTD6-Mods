@@ -3,7 +3,7 @@ using Assets.Scripts.Unity;
 using Assets.Scripts.Utils;
 using BTD_Mod_Helper.Api.Towers;
 
-namespace Banana_Farmer_In_Shop
+namespace BTD6_Master_Banana_Farmer_In_Shop
 {
     public class BananaFarmerMaster : ModTower
     {
