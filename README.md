@@ -103,6 +103,17 @@ These mods might not be compatible with other mods you have installed (specifica
     </tr>
 	<tr>
         <td width="25%" align="center">
+            <h2>Healthy Farms</h2>
+        </td>
+		<td>
+		Farms generate lives with each upgrade.
+		</td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/DruidLuck.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>
+	<tr>
+        <td width="25%" align="center">
             <h2>Hero Exp Boost</h2>
         </td>
 		<td>
@@ -139,7 +150,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Stuff in Shop</h2>
         </td>
 		<td>
-		Adds some powers and subtowers to the ingame shop.
+		Adds some powers and subtowers to the ingame shop, with a new Lives Farmer tower.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/StuffInShop.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
@@ -150,7 +161,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Stuff in Shop Addon</h2>
         </td>
 		<td>
-		(Requires Stuff in Shop) Makes Banana Farmer generate income and Energising Totem increased range, lasts 1000 rounds, stackable, grant camo detection, but nerfed fire rate boost from 25% to 12.5%. Also adds two more Banana Farmers that cost much more and generate more income.
+		(Requires Stuff in Shop) Makes Banana Farmer generate income and Energising Totem increased range, lasts 1000 rounds, stackable, grant camo detection, but nerfed fire rate boost from 25% to 12.5%. Also adds two more Banana Farmers that cost much more and generate more income, as well as three more Lives Farmers.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/StuffInShopAddon.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
