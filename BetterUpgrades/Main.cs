@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Assets.Scripts.Models;
+﻿using Assets.Scripts.Models;
 using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Models.Towers.Mods;
 using Assets.Scripts.Models.Towers.Projectiles;
@@ -16,7 +15,6 @@ namespace BetterUpgrades
     {
         public override void OnNewGameModel(GameModel gameModel, List<ModModel> mods)
         {
-
             // Berserker Brew 75% discount
             var berserkBrew = gameModel.GetUpgrade("Berserker Brew");
             berserkBrew.cost = (berserkBrew.cost * 25 / 100) - ((berserkBrew.cost * 25 / 100) % 5);

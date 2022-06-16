@@ -11,7 +11,7 @@ namespace Banana_Farmer_In_Shop
         public override SpriteReference IconReference => Game.instance.model.GetPowerWithName("BananaFarmer").icon;
         public override string TowerSet => SUPPORT;
         public override string BaseTower => TowerType.BananaFarmer;
-        public override int Cost => 100000;
+        public override int Cost => 10000;
         public override int TopPathUpgrades => 0;
         public override int MiddlePathUpgrades => 0;
         public override int BottomPathUpgrades => 0;

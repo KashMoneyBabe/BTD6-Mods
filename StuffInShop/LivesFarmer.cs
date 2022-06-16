@@ -1,9 +1,7 @@
 ﻿using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.Towers.Behaviors;
 using Assets.Scripts.Unity;
 using Assets.Scripts.Utils;
 using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
 
 namespace Banana_Farmer_In_Shop
 {
@@ -20,9 +18,6 @@ namespace Banana_Farmer_In_Shop
         public override string Description => "Lives Farmer";
 
         public override void ModifyBaseTowerModel(TowerModel towerModel)
-        {
-            var bonusLives = new BonusLivesPerRoundModel("BonusLivesPerRoundModel_" + towerModel.baseId, 1, 1.25f, "eb70b6823aec0644c81f873e94cb26cc");
-            towerModel.AddBehavior(bonusLives);
-        }
+        { }
     }
 }

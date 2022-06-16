@@ -5,7 +5,6 @@ using BTD_Mod_Helper.Extensions;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
 using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Bloons.Behaviors;
 using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
 
 [assembly: MelonInfo(typeof(BetterHeroes.Main), "Better Heroes", "1.0.0", "KashMoneyBabe")]

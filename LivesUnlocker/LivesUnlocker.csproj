@@ -7,8 +7,8 @@
     <ProjectGuid>{511B9D58-FFEA-489B-9DCB-E725CF081407}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StuffInShop</RootNamespace>
-    <AssemblyName>StuffInShop</AssemblyName>
+    <RootNamespace>LivesUnlocker</RootNamespace>
+    <AssemblyName>LivesUnlocker</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -52,29 +52,13 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnhollowerBaseLib, Version=0.4.17.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="UnhollowerBaseLib">
       <HintPath>..\References\UnhollowerBaseLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BananaFarmer.cs" />
-    <Compile Include="BoomSentry.cs" />
-    <Compile Include="CaveMonkey.cs" />
-    <Compile Include="ColdSentry.cs" />
-    <Compile Include="CrushingSentry.cs" />
-    <Compile Include="EnergisingTotem.cs" />
-    <Compile Include="EnergySentry.cs" />
-    <Compile Include="LivesFarmer.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="Marine.cs" />
-    <Compile Include="ParagonSentry.cs" />
-    <Compile Include="Pontoon.cs" />
-    <Compile Include="PortableLake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sentry.cs" />
-    <Compile Include="SunAvatarMini.cs" />
-    <Compile Include="TechBot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

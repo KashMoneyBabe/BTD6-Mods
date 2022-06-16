@@ -1,13 +1,9 @@
-﻿using System.Linq;
-using Assets.Scripts.Models;
-using Assets.Scripts.Models.Towers;
+﻿using Assets.Scripts.Models;
 using Assets.Scripts.Models.Towers.Mods;
-using Assets.Scripts.Models.Towers.Projectiles;
 using BTD_Mod_Helper;
 using BTD_Mod_Helper.Extensions;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
-
 using Assets.Scripts.Models.Towers.Behaviors;
 using Assets.Scripts.Models.Towers.TowerFilters;
 using UnhollowerBaseLib;
@@ -25,7 +21,7 @@ namespace StuffInShopAddon
                 if (towerModel.baseId == "StuffInShop-EnergisingTotem")
                 {
                     towerModel.RemoveBehavior<RateSupportModel>();
-                    var rateBuff = new RateSupportModel("RateSupportModel_EnergisingTotem" , 0.875f, false, "Village:HomelandDefense_EnergisingTotem", false, 1, new Il2CppReferenceArray<TowerFilterModel>(0), "CallToArmsBuff", "BuffIconHomelandDefense")
+                    var rateBuff = new RateSupportModel("RateSupportModel_EnergisingTotem", 0.875f, false, "Village:HomelandDefense_EnergisingTotem", false, 1, new Il2CppReferenceArray<TowerFilterModel>(0), "CallToArmsBuff", "BuffIconHomelandDefense")
                     {
                         onlyShowBuffIfMutated = false,
                         isUnique = false,
@@ -52,21 +48,43 @@ namespace StuffInShopAddon
                     };
                     towerModel.AddBehavior(camoBuff);
                 }
-               
+
                 if (towerModel.baseId == "StuffInShop-BananaFarmer")
                 {
-                    var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId, 100.0f, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
+                    var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId, 10.0f, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
                     towerModel.AddBehavior(cashGeneration);
                 }
                 if (towerModel.baseId == "StuffInShopAddon-BananaFarmerExpert")
                 {
-                    var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId, 1000.0f, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
+                    var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId, 100.0f, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
                     towerModel.AddBehavior(cashGeneration);
                 }
                 if (towerModel.baseId == "StuffInShopAddon-BananaFarmerMaster")
                 {
+                    var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId, 1000.0f, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
+                    towerModel.AddBehavior(cashGeneration);
+                }
+                if (towerModel.baseId == "StuffInShopAddon-BananaFarmerLegendary")
+                {
                     var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId, 10000.0f, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
                     towerModel.AddBehavior(cashGeneration);
+                }
+
+
+                if (towerModel.baseId == "StuffInShopAddon-LivesFarmerExpert")
+                {
+                    var bonusLives = new BonusLivesPerRoundModel("BonusLivesPerRoundModel_" + towerModel.baseId, 10, 1.25f, "eb70b6823aec0644c81f873e94cb26cc");
+                    towerModel.AddBehavior(bonusLives);
+                }
+                if (towerModel.baseId == "StuffInShopAddon-LivesFarmerMaster")
+                {
+                    var bonusLives = new BonusLivesPerRoundModel("BonusLivesPerRoundModel_" + towerModel.baseId, 100, 1.25f, "eb70b6823aec0644c81f873e94cb26cc");
+                    towerModel.AddBehavior(bonusLives);
+                }
+                if (towerModel.baseId == "StuffInShopAddon-LivesFarmerLegendary")
+                {
+                    var bonusLives = new BonusLivesPerRoundModel("BonusLivesPerRoundModel_" + towerModel.baseId, 1000, 1.25f, "eb70b6823aec0644c81f873e94cb26cc");
+                    towerModel.AddBehavior(bonusLives);
                 }
             }
         }
