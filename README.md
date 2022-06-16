@@ -70,6 +70,17 @@ These mods might not be compatible with other mods you have installed (specifica
     </tr>
 	<tr>
         <td width="25%" align="center">
+            <h2>Bigger Mana Shield</h2>
+        </td>
+		<td>
+		Mana Shield becomes 50 by default, customizable in BTD Mod Helper Menu. Includes option to toggle on/off in Impoppable and Chimps modes.
+		</td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/BiggerManaShield.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>	
+	<tr>
+        <td width="25%" align="center">
             <h2>Cheaper Upgrades</h2>
         </td>
 		<td>
@@ -109,7 +120,7 @@ These mods might not be compatible with other mods you have installed (specifica
 		Farms generate lives with each upgrade.
 		</td>
         <td width="12%">
-            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/DruidLuck.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/HealthyFarms.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
         </td>
     </tr>
 	<tr>
@@ -134,6 +145,17 @@ These mods might not be compatible with other mods you have installed (specifica
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/HeroExpScaling.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
         </td>
     </tr>
+	<tr>
+        <td width="25%" align="center">
+            <h2>Lives Unlocker</h2>
+        </td>
+		<td>
+		Unlocks the Lives softcap of 1000 and hardcap of 5000. Includes BTD Mod Helper option to toggle on/off in Impoppable and Chimps modes.
+		</td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LivesUnlocker.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>	
 	<tr>
         <td width="25%" align="center">
             <h2>Place Anywhere</h2>
@@ -161,7 +183,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Stuff in Shop Addon</h2>
         </td>
 		<td>
-		(Requires Stuff in Shop) Makes Banana Farmer generate income and Energising Totem increased range, lasts 1000 rounds, stackable, grant camo detection, but nerfed fire rate boost from 25% to 12.5%. Also adds three more Banana Farmers that cost much more and generate more income, as well as three more Lives Farmers.
+		(Requires Stuff in Shop) Makes Banana Farmer generate income and Energising Totem increased range, lasts 1000 rounds, stackable, grant camo detection, but nerfed fire rate boost from 25% to 12.5%. Also adds three more Banana Farmers that cost much more and generate more income, as well as three more Lives Farmers. Use with Lives Unlocker to go over the soft and hard limits.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/StuffInShopAddon.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
