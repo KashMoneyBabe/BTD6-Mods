@@ -5,7 +5,7 @@
 <p align="center">If you don't know how to install mods, check out <a href="https://hemisemidemipresent.github.io/btd6-modding-tutorial/">this tutorial</a>.
 </p>
 
-These mods were made for personal use but feel free to use/modify them. They're aimed at making the game much easier, while also providing farming alternatives in each tower class.
+These mods were made for personal use but feel free to use/modify them. They're aimed at making the game much easier, while also providing alternative ways of playing the game.
 <br>
 <br>
 These mods might not be compatible with other mods you have installed (specifically, Better Upgrades has issues with Ultimate Crosspathing).
