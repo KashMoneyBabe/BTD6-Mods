@@ -51,7 +51,7 @@ These mods might not be compatible with other mods you have installed (specifica
 		<BR>
 		Armor Piercing Darts: can pop lead.
 		<BR>
-		Sniper Monkey: Damage increased from 2 to 3, and gains +1 damage for each upgrade.
+		Sniper Monkey: Gains +1 damage for each upgrade.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/BetterUpgrades.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>

@@ -44,7 +44,7 @@ namespace BetterUpgrades
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.SniperMonkey))
             {
                 var damageModel = towerModel.GetWeapon().projectile.GetDamageModel();
-                damageModel.damage += (towerModel.appliedUpgrades.Count + 1);
+                damageModel.damage += towerModel.appliedUpgrades.Count;
             }
 
             // Ultravision increased range and see through walls
