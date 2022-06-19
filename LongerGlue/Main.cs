@@ -7,6 +7,7 @@ using BTD_Mod_Helper.Extensions;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
 
+
 [assembly: MelonInfo(typeof(LongerGlue.Main), "Longer Glue", "1.0.0", "KashMoneyBabe")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace LongerGlue
@@ -20,7 +21,8 @@ namespace LongerGlue
                 if (towerModel.GetWeapon().projectile.HasBehavior<SlowModel>())
                 {
                     var slow = towerModel.GetWeapon().projectile.GetBehavior<SlowModel>();
-                    slow.lifespanFrames += 18000 * (towerModel.appliedUpgrades.Count + 1);
+                    slow.lifespan += 300 * (towerModel.appliedUpgrades.Count + 1); // Glue lasts much longer
+                    slow.layers = 9999999; // Glue lasts all layers
                 }
             }
         }
