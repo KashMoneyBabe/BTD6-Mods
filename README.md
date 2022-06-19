@@ -51,7 +51,7 @@ These mods might not be compatible with other mods you have installed (specifica
 		<BR>
 		Armor Piercing Darts: can pop lead.
 		<BR>
-		Sniper Monkey: Gains +1 damage for each upgrade.
+		Sniper Monkey: Gains +1 damage for each upgrade. 1st path gains much more.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/BetterUpgrades.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
@@ -151,6 +151,17 @@ These mods might not be compatible with other mods you have installed (specifica
         </td>
 		<td>
 		Unlocks the Lives softcap of 1000 and hardcap of 5000. Includes BTD Mod Helper option to toggle on/off in Impoppable and Chimps modes.
+		</td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LivesUnlocker.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>	
+	<tr>
+        <td width="25%" align="center">
+            <h2>Longer Glue</h2>
+        </td>
+		<td>
+		Makes Glue Gunner's Glue last much longer with each upgrade.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LivesUnlocker.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>

@@ -45,6 +45,19 @@ namespace BetterUpgrades
             {
                 var damageModel = towerModel.GetWeapon().projectile.GetDamageModel();
                 damageModel.damage += towerModel.appliedUpgrades.Count;
+
+                if (towerModel.tiers[0] == 3)
+                {
+                    damageModel.damage += 20; // 20->40
+                }
+                if (towerModel.tiers[0] == 4)
+                {
+                    damageModel.damage += 70; // 30->100
+                }
+                if (towerModel.tiers[0] == 5)
+                {
+                    damageModel.damage += 160; // 80->240
+                }
             }
 
             // Ultravision increased range and see through walls
