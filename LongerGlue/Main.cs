@@ -19,8 +19,11 @@ namespace LongerGlue
         {
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.GlueGunner))
             {
-                var slow = towerModel.GetBehavior<SlowModel>();
-                slow.lifespanFrames += 6000*towerModel.appliedUpgrades.Count;
+                if (towerModel.HasBehavior<SlowModel>())
+                {
+                    var slow = towerModel.GetBehavior<SlowModel>();
+                    slow.lifespanFrames += 6000 * (towerModel.appliedUpgrades.Count+1);
+                }
             }
         }
     }
