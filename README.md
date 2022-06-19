@@ -164,7 +164,7 @@ These mods might not be compatible with other mods you have installed (specifica
 		Makes Glue Gunner's Glue last much longer with each upgrade.
 		</td>
         <td width="12%">
-            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LivesUnlocker.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LongerGlue.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
         </td>
     </tr>	
 	<tr>
