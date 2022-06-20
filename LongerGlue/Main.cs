@@ -29,9 +29,13 @@ namespace LongerGlue
                     dmg.lifespan += 300 * (towerModel.appliedUpgrades.Count + 1); // Corrosive Glue lasts much longer
                     dmg.layers = 9999999; // Corrosive Glue lasts all layers
                 }
-                if (towerModel.tiers[0] == 1)
+                if (towerModel.tiers[0] >= 1)
                 {
                     towerModel.GetWeapon().projectile.pierce += 2;
+                }
+                if (towerModel.tiers[2] >= 1)
+                {
+                    towerModel.GetWeapon().rate *= 0.8f;
                 }
             }
         }
