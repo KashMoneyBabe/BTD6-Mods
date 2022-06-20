@@ -17,7 +17,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Better Glue</h2>
         </td>
         <td>
-            Glue lasts much longer and applies to all layers. Glue Splatter slightly improved.
+            Glue lasts much longer and applies to all layers. Glue Splatter slightly improved, along with 100 and 001 upgrades.
         </td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/BetterGlue.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
