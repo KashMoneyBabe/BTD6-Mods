@@ -170,17 +170,6 @@ These mods might not be compatible with other mods you have installed (specifica
 	</tr>	
 	<tr>
         <td width="25%" align="center">
-            <h2>Longer Glue</h2>
-        </td>
-		<td>
-		Makes Glue Gunner's Glue last MUCH longer with each upgrade. Also makes glue affect all layers.
-		</td>
-        <td width="12%">
-            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LongerGlue.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
-        </td>
-    </tr>	
-	<tr>
-        <td width="25%" align="center">
             <h2>Place Anywhere</h2>
         </td>
 		<td>
