@@ -14,6 +14,17 @@ These mods might not be compatible with other mods you have installed (specifica
 <table style="table-layout:fixed">
     <tr>
         <td width="25%" align="center">
+            <h2>Better Glue</h2>
+        </td>
+        <td>
+            Glue lasts much longer and applies to all layers. Glue Splatter slightly improved.
+        </td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/BetterGlue.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>
+	<tr>
+        <td width="25%" align="center">
             <h2>Better Heroes</h2>
         </td>
         <td>
@@ -167,7 +178,6 @@ These mods might not be compatible with other mods you have installed (specifica
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LivesUnlocker.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
         </td>
     </tr>
-	</tr>	
 	<tr>
         <td width="25%" align="center">
             <h2>Place Anywhere</h2>
