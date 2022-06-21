@@ -27,15 +27,18 @@ namespace DenserBloons
 
         public override void OnNewGameModel(GameModel gameModel, List<ModModel> mods)
         {
-            foreach (var roundSet in gameModel.roundSets)
+            if (enabled)
             {
-                for (int i = 0; i < roundSet.rounds.Count; i++)
+                foreach (var roundSet in gameModel.roundSets)
                 {
-                    foreach (var group in roundSet.rounds[i].groups)
+                    for (int i = 0; i < roundSet.rounds.Count; i++)
                     {
-                        group.count *= multiplier;
+                        foreach (var group in roundSet.rounds[i].groups)
+                        {
+                            group.count *= multiplier;
+                        }
+                        roundSet.rounds[i] = new RoundModel("", roundSet.rounds[i].groups);
                     }
-                    roundSet.rounds[i] = new RoundModel("", roundSet.rounds[i].groups);
                 }
             }
         }
