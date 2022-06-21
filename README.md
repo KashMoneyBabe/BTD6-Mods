@@ -12,6 +12,17 @@ These mods might not be compatible with other mods you have installed (specifica
 
 
 <table style="table-layout:fixed">
+	<tr>
+        <td width="25%" align="center">
+            <h2>Ability Cooldown Multiplier</h2>
+        </td>
+        <td>
+            Configurable via Mod Helper Menu.
+        </td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/AbilityCooldownMultiplier.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>
     <tr>
         <td width="25%" align="center">
             <h2>Better Glue</h2>
