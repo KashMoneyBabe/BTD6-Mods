@@ -42,6 +42,15 @@ namespace BetterVillage
                         behavior.isUnique = false;
                     }
                 }
+                if (towerModel.HasBehavior<PierceSupportModel>())
+                {
+                    foreach (var behavior in towerModel.GetBehaviors<PierceSupportModel>())
+                    {
+                        behavior.filters = null;
+                        behavior.maxStackSize = 999;
+                        behavior.isUnique = false;
+                    }
+                }
 
                 float income = towerModel.appliedUpgrades.Count * 100f;
                 if (towerModel.tier == 5) income += 2000f;
