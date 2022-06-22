@@ -30,6 +30,7 @@ namespace BetterVillage
                 {
                     foreach (var behavior in towerModel.GetBehaviors<RangeSupportModel>())
                     {
+                        behavior.filters = null;
                         behavior.maxStackSize = 999;
                         behavior.isUnique = false;
                     }
@@ -38,6 +39,7 @@ namespace BetterVillage
                 {
                     foreach (var behavior in towerModel.GetBehaviors<RateSupportModel>())
                     {
+                        behavior.filters = null;
                         behavior.maxStackSize = 999;
                         behavior.isUnique = false;
                     }
@@ -49,6 +51,31 @@ namespace BetterVillage
                         behavior.filters = null;
                         behavior.maxStackSize = 999;
                         behavior.isUnique = false;
+                    }
+                }
+                if (towerModel.HasBehavior<ProjectileSpeedSupportModel>())
+                {
+                    foreach (var behavior in towerModel.GetBehaviors<ProjectileSpeedSupportModel>())
+                    {
+                        behavior.filters = null;
+                        behavior.maxStackSize = 999;
+                        behavior.isUnique = false;
+                    }
+                }
+                if (towerModel.HasBehavior<AbilityCooldownScaleSupportModel>())
+                {
+                    foreach (var behavior in towerModel.GetBehaviors<AbilityCooldownScaleSupportModel>())
+                    {
+                        behavior.filters = null;
+                        behavior.maxStackSize = 999;
+                        behavior.isUnique = false;
+                    }
+                }
+                if (towerModel.HasBehavior<FreeUpgradeSupportModel>())
+                {
+                    foreach (var behavior in towerModel.GetBehaviors<FreeUpgradeSupportModel>())
+                    {
+                        behavior.filters = null;
                     }
                 }
 
