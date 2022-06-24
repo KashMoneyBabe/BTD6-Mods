@@ -47,7 +47,7 @@ namespace BetterVillage
                         behavior.filters = null;
                         behavior.maxStackSize = 999;
                         behavior.isUnique = false;
-                        behavior.pierce += 2f;
+                        behavior.pierce += towerModel.tier;
                     }
                 }
                 if (towerModel.HasBehavior<ProjectileSpeedSupportModel>())
