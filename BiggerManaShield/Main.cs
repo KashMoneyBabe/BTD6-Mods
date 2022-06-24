@@ -24,7 +24,7 @@ namespace BiggerManaShield
         {
             if (!enabledChimps)
             {
-                if (gameModel.maxHealth != 1)
+                if (gameModel.startingShield > 0)
                 {
                     gameModel.maxShield = ManaShield;
                     gameModel.startingShield = ManaShield;
