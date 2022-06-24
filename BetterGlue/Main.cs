@@ -18,6 +18,16 @@ namespace BetterGlue
         {
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.GlueGunner))
             {
+                if (towerModel.GetWeapon().projectile.HasBehavior<CreateProjectileOnContactModel>())
+                {
+                    if (towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.HasBehavior<SlowModel>())
+                    {
+                        var slow = towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetBehavior<SlowModel>();
+                        slow.lifespan += 300 * (towerModel.appliedUpgrades.Count + 1); // Glue lasts much longer
+                        slow.layers = 9999999; // Glue lasts all layers
+                    }
+                }
+
                 if (towerModel.tiers[0] == 1)
                 {
                     if (!towerModel.GetWeapon().projectile.HasBehavior<AddBehaviorToBloonModel>())
@@ -33,6 +43,23 @@ namespace BetterGlue
                         collisionArray[2] = 1;
                         towerModel.GetWeapon().projectile.collisionPasses = collisionArray;
                     }
+                    if (towerModel.GetWeapon().projectile.HasBehavior<CreateProjectileOnContactModel>())
+                    {
+                        if (!towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.HasBehavior<AddBehaviorToBloonModel>())
+                        {
+                            var dmgovertime = new DamageOverTimeModel("DamageOverTimeModel_" + towerModel.baseId + towerModel.tiers[0] + towerModel.tiers[1] + towerModel.tiers[2], 1f, 5f, 0, null, -1.0f, false, 0, false, 0, false, false, null);
+                            var addcorrosive = new AddBehaviorToBloonModel("AddBehaviorToBloonModel_" + towerModel.baseId + towerModel.tiers[0] + towerModel.tiers[1] + towerModel.tiers[2], "CorrosiveDot", 11f, 9999999, null, null, null, "GlueBasic", true, false, false, false, 2, false, 0);
+                            addcorrosive.AddBehavior(dmgovertime);
+                            towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.AddBehavior(addcorrosive);
+
+                            var collisionArray = new UnhollowerBaseLib.Il2CppStructArray<int>(3) { };
+                            collisionArray[0] = -1;
+                            collisionArray[1] = 0;
+                            collisionArray[2] = 1;
+                            towerModel.GetWeapon().projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.collisionPasses = collisionArray;
+                        }
+                    }
+
                 }
                 if (towerModel.tiers[2] >= 1)
                 {
