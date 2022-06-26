@@ -7,6 +7,7 @@ using BTD_Mod_Helper.Extensions;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
 
+
 [assembly: MelonInfo(typeof(BetterVillage.Main), "Better Village", "1.0.0", "KashMoneyBabe")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace BetterVillage
@@ -15,6 +16,7 @@ namespace BetterVillage
     {
         public override void OnNewGameModel(GameModel gameModel, List<ModModel> mods)
         {
+
             foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.MonkeyVillage))
             {
                 towerModel.range *= 1.5f;
@@ -22,6 +24,11 @@ namespace BetterVillage
                 {
                     attack.range *= 1.5f;
                 }
+                if (towerModel.tiers[0] == 5)
+                {
+                    towerModel.GetWeapon().rate *= 20f;
+                }
+
                 if (towerModel.HasBehavior<RangeSupportModel>())
                 {
                     foreach (var behavior in towerModel.GetBehaviors<RangeSupportModel>())
@@ -86,7 +93,6 @@ namespace BetterVillage
 
                 var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId + towerModel.tiers[0] + towerModel.tiers[1] + towerModel.tiers[2], income, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
                 towerModel.AddBehavior(cashGeneration);
-
             }
         }
     }
