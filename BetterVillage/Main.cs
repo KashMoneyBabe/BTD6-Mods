@@ -26,7 +26,13 @@ namespace BetterVillage
                 }
                 if (towerModel.tiers[0] == 5)
                 {
-                    towerModel.GetWeapon().rate *= 20f;
+                    foreach (var attack in towerModel.GetAttackModels())
+                    {
+                        foreach (var weapon in attack.weapons)
+                        {
+                            attack.RemoveWeapon(weapon);
+                        }
+                    }
                 }
 
                 if (towerModel.HasBehavior<RangeSupportModel>())
