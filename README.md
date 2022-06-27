@@ -103,28 +103,6 @@ These mods might not be compatible with other mods you have installed (specifica
     </tr>
 	<tr>
         <td width="25%" align="center">
-            <h2>Dart Club</h2>
-        </td>
-		<td>
-		Dart Monkeys generate a small income. Increases with each upgrade.
-		</td>
-        <td width="12%">
-            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/DartClub.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
-        </td>
-    </tr>
-	<tr>
-        <td width="25%" align="center">
-            <h2>Druid Luck</h2>
-        </td>
-		<td>
-		Druids generate a small income. Increases with each upgrade.
-		</td>
-        <td width="12%">
-            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/DruidLuck.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
-        </td>
-    </tr>
-	<tr>
-        <td width="25%" align="center">
             <h2>Healthy Farms</h2>
         </td>
 		<td>
