@@ -64,7 +64,7 @@ namespace BetterVillage
                         behavior.filters = null;
                         behavior.maxStackSize = 999;
                         behavior.isUnique = false;
-                        behavior.multiplier = 1f;
+                        behavior.multiplier = 0.5f;
 
                     }
                 }
