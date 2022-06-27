@@ -73,7 +73,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Better Village</h2>
         </td>
 		<td>
-		Monkey Village is upgraded with +50% range, stackable buffs, 1st path affects all monkeys, and generates some income with each upgrade.
+		Monkey Village is upgraded with +50% range, stackable buffs, 1st path affects all monkeys.
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/BetterVillage.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
