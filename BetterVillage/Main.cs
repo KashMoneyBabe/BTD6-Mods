@@ -92,13 +92,6 @@ namespace BetterVillage
                         behavior.upgrade += 1;
                     }
                 }
-
-                float income = towerModel.appliedUpgrades.Count * 100f;
-                if (towerModel.tier == 5) income += 2000f;
-                if (towerModel.tier == 0) income += 50f;
-
-                var cashGeneration = new PerRoundCashBonusTowerModel("PerRoundCashBonusTowerModel_" + towerModel.baseId + towerModel.tiers[0] + towerModel.tiers[1] + towerModel.tiers[2], income, 0.0f, 1.0f, "80178409df24b3b479342ed73cffb63d", false);
-                towerModel.AddBehavior(cashGeneration);
             }
         }
     }
