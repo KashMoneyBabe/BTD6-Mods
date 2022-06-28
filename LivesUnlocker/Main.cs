@@ -16,7 +16,7 @@ namespace LivesUnlocker
         {
             if (!enabledChimps)
             {
-                if (gameModel.maxHealth != 1)
+                if (mods[1].name != "Clicks" && mods[1].name != "Impoppable" && gameModel.startingHealth > 1)
                 {
                     gameModel.maxHealth = float.MaxValue;
                     gameModel.softcapHealthPercentModifier = 1f;

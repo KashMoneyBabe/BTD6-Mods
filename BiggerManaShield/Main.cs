@@ -24,7 +24,7 @@ namespace BiggerManaShield
         {
             if (!enabledChimps)
             {
-                if (gameModel.startingShield > 0)
+                if (mods[1].name != "Clicks" && mods[1].name != "Impoppable" && gameModel.startingShield > 0)
                 {
                     gameModel.maxShield = ManaShield;
                     gameModel.startingShield = ManaShield;
