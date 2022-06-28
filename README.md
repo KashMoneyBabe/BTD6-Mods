@@ -103,6 +103,29 @@ These mods might not be compatible with other mods you have installed (specifica
     </tr>
 	<tr>
         <td width="25%" align="center">
+            <h2>Customizer Mod</h2>
+        </td>
+		<td>
+		A mod that lets you customize aspects of the game, similar to the challenge editor's modifications. Will probably add more features later on. So far includes:
+		<BR>
+		Starting Cash, Starting Lives, Map Removables, Abilities Cooldown
+		<BR>
+		Towers: Fire Rate, Damage, Pierce, Range, Projectile Speed, Bomb Blast Radius, Tower Price, Upgrade Price, Sell Multiplier
+		<BR>
+		Bloons: Ceramic Health, MOAB Health, Bloon Speed, MOAB Speed, Regrow Speed, Bloon Density
+		<BR>
+		All Camo Toggle
+		<BR>
+		All Regrow Toggle
+		<BR>
+		All Fortified Toggle
+		</td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/CustomizerMod.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>
+	<tr>
+        <td width="25%" align="center">
             <h2>Healthy Farms</h2>
         </td>
 		<td>
@@ -143,6 +166,18 @@ These mods might not be compatible with other mods you have installed (specifica
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/LivesUnlocker.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
+        </td>
+    </tr>
+	<tr>
+	<tr>
+        <td width="25%" align="center">
+            <h2>Monkey Hustlers</h2>
+        </td>
+		<td>
+		Times are hard and even monkeys need side hustles. All towers earn X% of their costs each round, where X is customizable (2% by default). Tower upgrades increase revenue, but Hero upgrades don't count to their cost.
+		</td>
+        <td width="12%">
+            <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/MonkeyHustlers.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
         </td>
     </tr>
 	<tr>
