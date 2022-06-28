@@ -108,6 +108,7 @@ These mods might not be compatible with other mods you have installed (specifica
 		<td>
 		A mod that lets you customize aspects of the game, similar to the challenge editor's modifications. Will probably add more features later on. So far includes:
 		<BR>
+		<BR>
 		Starting Cash, Starting Lives, Map Removables, Abilities Cooldown
 		<BR>
 		Towers: Fire Rate, Damage, Pierce, Range, Projectile Speed, Bomb Blast Radius, Tower Price, Upgrade Price, Sell Multiplier
