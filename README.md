@@ -175,7 +175,7 @@ These mods might not be compatible with other mods you have installed (specifica
             <h2>Monkey Hustlers</h2>
         </td>
 		<td>
-		Times are hard and even monkeys need side hustles. All towers earn X% of their costs each round, where X is customizable (2% by default). Tower upgrades increase revenue, but Hero upgrades don't count to their cost.
+		Times are hard and even monkeys need side hustles. All towers earn X% of their costs each round, where X is customizable (2% by default). Tower upgrades increase revenue, but Hero upgrades don't count to their cost. (PS: Boomerang and Super Monkey are bugged; you can't see how much income they've made but rest assured they're generating cash each round)
 		</td>
         <td width="12%">
             <a href="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/_DLLs/MonkeyHustlers.dll"><img alt="Download" src="https://github.com/KashMoneyBabe/BTD6-Mods/blob/main/download_small.png?raw=true"></a>
