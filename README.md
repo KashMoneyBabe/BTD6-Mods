@@ -111,7 +111,7 @@ These mods might not be compatible with other mods you have installed (specifica
 		<BR>
 		Starting Cash, Starting Lives, Map Removables, Abilities Cooldown
 		<BR>
-		Towers: Fire Rate, Damage, Pierce, Range, Projectile Speed, Bomb Blast Radius, Tower Price, Upgrade Price, Sell Multiplier
+		Towers: Fire Rate, Damage, Pierce, Range, Projectile Speed, Bomb Blast Radius, Tower Price, Upgrade Price, Sell Multiplier, Farming Multiplier
 		<BR>
 		Bloons: Ceramic Health, MOAB Health, Bloon Speed, MOAB Speed, Regrow Speed, Bloon Density
 		<BR>
