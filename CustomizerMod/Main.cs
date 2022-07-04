@@ -8,6 +8,7 @@ using BTD_Mod_Helper.Extensions;
 using Assets.Scripts.Models.Rounds;
 using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Assets.Scripts.Models.Towers.Projectiles;
+using Assets.Scripts.Models.Towers.Behaviors;
 using Assets.Scripts.Models.Bloons.Behaviors;
 using System.Linq;
 
@@ -199,7 +200,7 @@ namespace CustomizerMod
         // Tower Sell Multiplier Switch
         public static ModSettingBool towerSellMultiplierEnabled = new ModSettingBool(false)
         {
-            displayName = "Tower Sell Multiplier Enabled"
+            displayName = "Tower Sell Enabled"
         };
         // Tower Sell Multiplier
         public static ModSettingDouble towerSellMultiplier = new ModSettingDouble(0.7)
@@ -207,6 +208,20 @@ namespace CustomizerMod
             displayName = "Tower Sell Multiplier",
             minValue = 0.05,
             maxValue = 0.95,
+            isSlider = true
+        };
+
+        // Farming Switch
+        public static ModSettingBool towerFarmingEnabled = new ModSettingBool(false)
+        {
+            displayName = "Farming Enabled"
+        };
+        // Farming Multiplier
+        public static ModSettingDouble towerFarmingMultiplier = new ModSettingDouble(1)
+        {
+            displayName = "Farming Multiplier",
+            minValue = 0.001,
+            maxValue = 1000,
             isSlider = true
         };
 
@@ -339,7 +354,7 @@ namespace CustomizerMod
                     }
                 }
 
-                if (towerRangeEnabled || towerPriceEnabled || towerAbilityEnabled || towerFireRateEnabled || towerDamageEnabled || towerPierceEnabled || towerBombRadiusEnabled || towerProjectileEnabled)
+                if (towerRangeEnabled || towerPriceEnabled || towerAbilityEnabled || towerFireRateEnabled || towerDamageEnabled || towerPierceEnabled || towerBombRadiusEnabled || towerProjectileEnabled || towerFarmingEnabled)
                 {
                     foreach (var tower in gameModel.towers)
                     {
@@ -347,7 +362,9 @@ namespace CustomizerMod
                             tower.range *= (float)towerRangeMultiplier;
                         if (towerPriceEnabled)
                             tower.cost *= (float)towerPriceMultiplier;
-
+                        if (towerFarmingEnabled)
+                            if (tower.HasBehavior<PerRoundCashBonusTowerModel>())
+                                tower.GetBehavior<PerRoundCashBonusTowerModel>().cashPerRound *= (float)towerFarmingMultiplier;
                         if (towerAbilityEnabled)
                         {
                             foreach (var ability in tower.GetAbilites())
@@ -369,7 +386,7 @@ namespace CustomizerMod
                                 weapon.rate *= 1f / (float)towerFireRateMultiplier;
                             }
                         }
-                        if (towerDamageEnabled || towerPierceEnabled || towerBombRadiusEnabled || towerProjectileEnabled)
+                        if (towerDamageEnabled || towerPierceEnabled || towerBombRadiusEnabled || towerProjectileEnabled || towerFarmingEnabled)
                         {
                             foreach (var proj in tower.GetDescendants<ProjectileModel>().ToList())
                             {
@@ -381,6 +398,12 @@ namespace CustomizerMod
                                 if (towerProjectileEnabled)
                                     if (proj.HasBehavior<TravelStraitModel>())
                                         proj.GetBehavior<TravelStraitModel>().Speed *= (float)towerProjectileMultiplier;
+                                if (towerFarmingEnabled)
+                                    if (proj.HasBehavior<CashModel>())
+                                    {
+                                        proj.GetBehavior<CashModel>().minimum *= (float)towerFarmingMultiplier;
+                                        proj.GetBehavior<CashModel>().maximum *= (float)towerFarmingMultiplier;
+                                    }
 
                                 if (towerBombRadiusEnabled)
                                     if (proj.id == "Explosion")
